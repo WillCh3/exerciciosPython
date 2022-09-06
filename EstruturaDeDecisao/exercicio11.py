@@ -15,6 +15,30 @@ o novo salário, após o aumento.
 
 salario = float(input('Digite seu salário: '))
 porc = 0
-if salario <= 280.00:
+
+if salario >0 and salario <= 280.00:
+    porc = (20/ 100) * salario
+    print(f'Salario Antes do reajuste: {salario}')
+    print(f'Percentual de aumento: 20%')
+    print(f'Valor do aumento: R${porc}')
+    print(f'Novo salário com aumento: R${salario + porc}')
+elif salario > 280 and salario <= 700:
     porc = (15/ 100) * salario
-print(porc)
+    print(f'Salario Antes do reajuste: {salario}')
+    print(f'Percentual de aumento: 15%')
+    print(f'Valor do aumento: R${porc}')
+    print(f'Novo salário com aumento: R${salario + porc}')
+elif salario > 700 and salario <= 1500:
+    porc = (10/ 100) * salario
+    print(f'Salario Antes do reajuste: {salario}')
+    print(f'Percentual de aumento: 10%')
+    print(f'Valor do aumento: R${porc}')
+    print(f'Novo salário com aumento: R${salario + porc}')
+elif salario > 1500:
+    porc = (5/ 100) * salario
+    print(f'Salario Antes do reajuste: {salario}')
+    print(f'Percentual de aumento: 15%')
+    print(f'Valor do aumento: R${porc}')
+    print(f'Novo salário com aumento: R${salario + porc}')
+else:
+    print(f'O Valor de {salario} é um salario invalido')
